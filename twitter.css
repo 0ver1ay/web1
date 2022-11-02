@@ -6,9 +6,11 @@
     --cardWidth: 80%;
     margin: 0;
     padding: 0;
+    max-height: 100vh;
 }
 
 body {
+    overflow: hidden;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-style: italic;
@@ -20,17 +22,19 @@ body {
     position: relative;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.27);
+
     background-image:
             linear-gradient(130deg, transparent 0% 33%, var(--g1) 66%,
-            var(--g2) 83.5%, var(--g3) 100%),
+            var(--g2) 83.4%, var(--g3) 83.5%),
             linear-gradient(310deg, transparent 0% 33%, var(--g1) 66%,
-            var(--g2) 83.5%, var(--g3) 100%);
-    background-repeat: no-repeat;
+            var(--g2) 83.4%, var(--g3) 83.5%);
+    background-repeat: no-repeat , no-repeat;
+    background-size: 100% 100%, 100% 100%;
 
 }
 
 .card {
+
     aspect-ratio: 1 /1.6;
     height: 80vh;
     max-height: 80vh;
@@ -56,6 +60,7 @@ body {
 
 
 .card:before {
+
     border-radius: 0;
     aspect-ratio: 1 / 1.6;
     height: inherit;
@@ -121,7 +126,7 @@ body {
 
 
 .card-content {
-    box-shadow: 0 0 8vh 3vh dodgerblue;
+    box-shadow: 0 0 1vh 0.5vh dodgerblue;
     color: white;
     display: flex;
     flex-wrap: wrap;
@@ -130,11 +135,15 @@ body {
     height: 80vh;
     align-items: center;
     font-size: 7vw;
-
+    margin: 0;
+    padding: 0;
 
 }
-
+.card-content:hover {
+    box-shadow: 0 0 1vh 0.5vh yellow;
+}
 h1 {
+
     rotate: 3deg;
     font-size:14vh;
     margin: 0;
